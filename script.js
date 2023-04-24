@@ -61,17 +61,31 @@ btnPlay.addEventListener(`click`,
         // controllo difficoltà
         if (difficult == `easy`) {
             for (let i = 1; i <= 49; i++) {
-                grid.innerHTML += `<div class="cell_7">${i}</div>`;
+                grid.innerHTML += `<div class="cell_7 click">${i}</div>`;
             };
         } else if (difficult == `medium`) {
             for (let i = 1; i <= 81; i++) {
-                grid.innerHTML += `<div class="cell_9">${i}</div>`;
+                grid.innerHTML += `<div class="cell_9 click">${i}</div>`;
             };
         } else if (difficult == `hard`) {
             for (let i = 1; i <= 100; i++) {
-                grid.innerHTML += `<div class="cell_10">${i}</div>`;
+                grid.innerHTML += `<div class="cell_10 click">${i}</div>`;
             };
         }
+
+        // 3. CLICK CELLE
+        const listCells = document.querySelectorAll(`.click`);
+        for (let i = 0; i < listCells.length; i++) {
+            const cell = listCells[i];
+            // 4. COLORARE DI AZZURRO
+            cell.addEventListener(`click`, 
+                function() {
+                    cell.classList.toggle(`clicked`);
+                    // 5. NUMERO IN CONSOLE
+                    console.log(`Num Selezionato:` + ` ` + (i + 1));
+                }
+            )
+        };
 
     }
 )
