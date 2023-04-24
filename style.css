@@ -15,6 +15,10 @@ nav {
     height: 8vh;
 }
 
+select {
+    margin-right: 0.7em;
+}
+
 
 /*--- MAIN ---*/
 main {
@@ -24,14 +28,44 @@ main {
 
 /* griglia */
 .grid {
-    width: 800px;
-    height: 800px;
+    width: 1000px;
+    height: 1000px;
     display: flex;
     flex-wrap: wrap;
     box-sizing: content-box;
 }
 
 .cell {
+    width: 125px;
+    height: 125px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+}
+
+.cell_7 {
+    width: 142.8571px;
+    height: 142.8571px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+}
+
+.cell_9 {
+    width: 111.1px;
+    height: 111.1px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+}
+
+.cell_10 {
     width: 100px;
     height: 100px;
     border: 1px solid black;
