@@ -22,9 +22,12 @@ btnPlay.addEventListener(`click`,
         const listCells = document.querySelectorAll(`.cell`);
         for (let i = 0; i < listCells.length; i++) {
             const cell = listCells[i];
+            // 4. COLORARE DI AZZURRO
             cell.addEventListener(`click`, 
                 function() {
                     cell.classList.toggle(`clicked`);
+                    // 5. NUMERO IN CONSOLE
+                    console.log(i + 1);
                 }
             )
         };
